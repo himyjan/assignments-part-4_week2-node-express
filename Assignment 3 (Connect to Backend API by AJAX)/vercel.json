@@ -6,14 +6,10 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/"
-    },
-    {
-      "source": "/sum.html",
-      "destination": "/sum.html"
+      "src": "/.*",
+      "dest": "sum.html"
     }
   ]
 }
