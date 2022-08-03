@@ -23,6 +23,22 @@ app.use(express.static("./"));
 
 app.get("/", (req, res) => {
   res.send("Hello, My Server!");
+  res.download(
+    "https://github.com/himyjan/assignments/blob/master/part-4_week2/Assignment%203%20(Connect%20to%20Backend%20API%20by%20AJAX)/sum.html",
+    function (err) {
+      if (err) {
+        console.log(err);
+      }
+    }
+  );
+  res.download(
+    "https://github.com/himyjan/assignments/blob/master/part-4_week2/Assignment%203%20(Connect%20to%20Backend%20API%20by%20AJAX)/sum.css",
+    function (err) {
+      if (err) {
+        console.log(err);
+      }
+    }
+  );
 });
 
 app.get("/getData", (req, res) => {
